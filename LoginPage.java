@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-class Bank{
+class Account{
     String password;
     int AccountBalance=0;
     Scanner scanner1 = new Scanner(System.in);
@@ -31,7 +31,7 @@ class Bank{
         AccountBalance=Doer(giveinput,0);
     }
 }
-class User extends Bank{
+class User extends Account{
     String name;
     User(String name, String password) {
         this.name = name;
