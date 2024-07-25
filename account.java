@@ -1,7 +1,7 @@
-package bank;
 
-public class Account {
-	public Account(String username,String password) { //constructor 
+
+public class account {
+	public account(String username,String password) { //constructor 
 		this.username = username;
 		this.password = password;
 	}

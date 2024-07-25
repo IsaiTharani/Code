@@ -31,22 +31,22 @@ class Account{
         AccountBalance=Doer(giveinput,0);
     }
 }
-class User extends Account{
+class IUser extends Account{
     String name;
-    User(String name, String password) {
+    IUser(String name, String password) {
         this.name = name;
         this.password = password;
     }
 }
 class Banking{
     static Scanner scanner=new Scanner(System.in);
-    static Map<String,User> Details=new HashMap<>();
+    static Map<String,IUser> Details=new HashMap<>();
     public static void main(String[] args) {
         while(true){
             System.out.print("Enter username: ");
             String Username=scanner.nextLine();
             if(Details.containsKey(Username)){
-                User account = Details.get(Username);
+                IUser account = Details.get(Username);
                 System.out.println("Enter the password");
                 String input =scanner.nextLine();
                 if(account.password.equals(input)){
@@ -66,11 +66,11 @@ class Banking{
     static void addAccount(String username) {
             System.out.print("Enter password: ");
             String Pass=scanner.nextLine();
-            User input = new User(username,Pass);
+            IUser input = new IUser(username,Pass);
             Details.put(username, input);
     }
     static void Display(String name){
-        User account = Details.get(name);
+        IUser account = Details.get(name);
         System.out.println("Balance: " + account.AccountBalance);
     }
 }
