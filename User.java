@@ -1,4 +1,4 @@
-import java.util.HashMap;
+//import java.util.HashMap;
 import java.util.Map;
 
 public class User {
@@ -7,10 +7,10 @@ public class User {
     private Map<String, Product> cart;
 
     // Constructor
-    public User(String username, String password) {
+    public User(String username, String password,Map<String, Product> cart) {
         this.username = username;
         this.password = password;
-        this.cart = new HashMap<>();
+        this.cart = cart;
     }
 
     // Getter for Username
@@ -46,5 +46,8 @@ public class User {
     // Get cart
     public Map<String, Product> getCart() {
         return cart;
+    }
+    public String toString() {
+        return "User Name: " + username + "cart" + cart ;
     }
 }

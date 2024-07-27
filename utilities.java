@@ -22,7 +22,6 @@ public class utilities {
         } catch (InputMismatchException e) {
             scan.nextLine();
             obj= getInput(type,scan);
-            // TODO: handle exception
         }
         return obj;  
     } 
